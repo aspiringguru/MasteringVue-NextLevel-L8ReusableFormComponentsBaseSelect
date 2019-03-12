@@ -4,6 +4,7 @@
     <form @submit.prevent="createEvent">
       <BaseSelect label="Select a category" :options="categories" v-model="event.category"/>
       <!-- nb: categories is populated by categories: this.$store.state.categories below. -->
+      <!-- this.event = this.createFreshEventObject()  -->
       <h3>Name & describe your event</h3>
       <BaseInput label="Title" v-model="event.title" type="text" placeholder="Title" class="field"/>
 
@@ -31,12 +32,7 @@
         <datepicker v-model="event.date" placeholder="Select a date"/>
       </div>
 
-      <div class="field">
-        <label>Select a time</label>
-        <select v-model="event.time">
-          <option v-for="time in times" :key="time">{{ time }}</option>
-        </select>
-      </div>
+      <BaseSelect label="Select a time" :options="times" v-model="event.time" class="field"/>
 
       <input type="submit" class="button -fill-gradient" value="Submit">
     </form>
