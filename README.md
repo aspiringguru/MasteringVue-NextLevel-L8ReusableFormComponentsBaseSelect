@@ -61,3 +61,23 @@ To run the mock database
 | Progress Bar: In-Component Route Guards   | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progress-bar-start)        | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progressbar-in-component-route-guard-finish) |
 | Progress Bar: Global and Per-Route Guards | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progress-bar-start)        | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progress-bar-global-guard)                   |
 | Completing our Progress Bar               | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progress-bar-global-guard) | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/progress-bar-finished)                       |
+
+### install and work notes
+
+```
+
+json-server --watch db.json
+#above = no delay
+json-server -d 1500 --watch db.json
+#above = 1.5 second delay
+
+npm install --save nprogress nprogress/nprogress.css
+
+
+npm install
+yarn serve
+
+https://vue-multiselect.js.org/
+
+
+```
