@@ -2,7 +2,8 @@
   <div>
     <h1>Create an Event</h1>
     <form @submit.prevent="createEvent">
-      <BaseSelect label="Select a category" :options="categories" v-model="event.category"/>
+      <BaseSelect label="Select a name" :options="names" v-model="event.name"/>
+      <!-- <BaseSelect label="Select a category" :options="categories" v-model="event.category"/> -->
       <!-- nb: categories is populated by categories: this.$store.state.categories below. -->
       <!-- this.event = this.createFreshEventObject()  -->
       <h3>Name & describe your event</h3>
@@ -55,6 +56,11 @@ export default {
     }
     return {
       times,
+      names: [
+        { id: '123', firstName: 'fred', lastName: 'smith' },
+        { id: '222', firstName: 'peter', lastName: 'johnson' },
+        { id: '333', firstName: 'jim', lastName: 'peterson' }
+      ],
       categories: this.$store.state.categories,
       event: this.createFreshEventObject()
     }

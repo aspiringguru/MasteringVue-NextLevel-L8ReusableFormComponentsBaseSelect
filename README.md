@@ -78,6 +78,8 @@ npm install
 yarn serve
 
 https://vue-multiselect.js.org/
+check this for complex objects, refer lesson @ 5:35
+
 
 
 ```
